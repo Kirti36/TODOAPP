@@ -16,12 +16,13 @@
         android:padding="8dp">
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/lightPurple"
-            android:id="@+id/checkbox"
-            android:text="@string/tsk_1"
-            android:paddingStart="8dp" />
+            android:fontFamily="@font/convergence"
+            android:paddingStart="8dp"
+            android:text="@string/tsk_1" />
     </RelativeLayout>
 
 

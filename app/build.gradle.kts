@@ -41,5 +41,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.airbnb.android:lottie:6.4.0")
     implementation ("com.google.android.material:material:1.11.0")
+    implementation ("it.xabaras.android:recyclerview-swipedecorator:1.4")
 
 }

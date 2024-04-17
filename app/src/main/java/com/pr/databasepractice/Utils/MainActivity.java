@@ -3,6 +3,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
 
             bt.setOnClickListener(view -> AddNewTask.newinst().show(getSupportFragmentManager(),AddNewTask.TAG));
         logTableContents();
+        ItemTouchHelper ItemHelper = new ItemTouchHelper(new RecyclerViewHelper(adapter));
+        ItemHelper.attachToRecyclerView(recycleview);
     }
 
     @Override

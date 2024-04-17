@@ -1,6 +1,7 @@
 package com.pr.databasepractice.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +19,13 @@ import com.pr.databasepractice.Model.TodoModel;
 import com.pr.databasepractice.R;
 
 import java.util.List;
+import java.util.Random;
 
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> {
     private  List<TodoModel> todolist;
     private MainActivity activity;
     private MyDatabase myDb;
+    private Random random = new Random();
     public ToDoAdapter(MyDatabase myDb,MainActivity activity){
         this.myDb = myDb;
         this.activity=activity;
@@ -51,6 +54,12 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
 
         }
     });
+        int color = getRandomColor();
+        holder.itemView.setBackgroundColor(color);
+    }
+
+    private int getRandomColor() {
+        return Color.argb(150, random.nextInt(256), random.nextInt(256), random.nextInt(256));
     }
     public boolean toBool(int num){
         return num!=0;
