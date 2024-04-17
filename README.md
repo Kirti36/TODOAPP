@@ -1,7 +1,7 @@
-# ToDo App
+# 👻ToDo App
 ### A ToDo List App Built With SQLite Database
 
-## App Features
+## App Features🔍
 
 - **Add New ToDo**
 - **Swipe left to edit task**
